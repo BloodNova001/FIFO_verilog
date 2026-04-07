@@ -10,26 +10,26 @@ All operations occur on a **single clock domain** (`clk`), making the design sim
 
 ## Architectural Blocks
 
-      +----------------------+
-      |      Control Logic   |
-      | fifo_counter         |
-      | buf_empty / buf_full |
-      +----------+-----------+
-                 |
-     +---------------+----------------+
-     |                                |
-+----v----+                      +----v----+
-| Write   |                      | Read    |
-| Pointer |                      | Pointer |
-| wr_ptr  |                      | rd_ptr  |
-+----+----+                      +----+----+
-     |                                |
-     +------------+  +----------------+
-                  |  |
-            +-----v--v------+
-            |  FIFO Memory  |
-            | buf_mem[16]   |
-            +---------------+
+              +----------------------+
+              |      Control Logic   |
+              | fifo_counter         |
+              | buf_empty / buf_full |
+              +----------+-----------+
+                         |
+         +---------------+----------------+
+         |                                |
+    +----v----+                      +----v----+
+    | Write   |                      | Read    |
+    | Pointer |                      | Pointer |
+    | wr_ptr  |                      | rd_ptr  |
+    +----+----+                      +----+----+
+         |                                |
+         +------------+  +----------------+
+                      |  |
+                +-----v--v------+
+                |  FIFO Memory  |
+                | buf_mem[16]   |
+                +---------------+
 
 ---
 
